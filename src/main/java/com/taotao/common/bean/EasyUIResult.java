@@ -1,5 +1,8 @@
 package com.taotao.common.bean;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.List;
 
 
@@ -7,7 +10,7 @@ import java.util.List;
 public class EasyUIResult {
 
     // 定义jackson对象
-    //private static final ObjectMapper MAPPER = new ObjectMapper();
+    private static final ObjectMapper MAPPER = new ObjectMapper();
 
     private Integer total;
 
@@ -44,12 +47,12 @@ public class EasyUIResult {
 
     /**
      * Object是集合转化
-     * 
+     *
      * @param jsonData json数据
      * @param clazz 集合中的类型
      * @return
      */
-    /*public static EasyUIResult formatToList(String jsonData, Class<?> clazz) {
+    public static EasyUIResult formatToList(String jsonData, Class<?> clazz) {
         try {
             JsonNode jsonNode = MAPPER.readTree(jsonData);
             JsonNode data = jsonNode.get("rows");
@@ -62,6 +65,6 @@ public class EasyUIResult {
         } catch (Exception e) {
             return null;
         }
-    }*/
+    }
 
 }
