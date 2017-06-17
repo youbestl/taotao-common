@@ -12,7 +12,7 @@ import redis.clients.jedis.ShardedJedisPool;
 @Service
 public class RedisService {
 
-    @Autowired(required = false)//从spring容器去找改bean找到就注入，找不到就忽略
+    @Autowired(required = false) //从spring容器去找改bean找到就注入，找不到就忽略
     private ShardedJedisPool shardedJedisPool;
 
     /**
